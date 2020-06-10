@@ -51,6 +51,7 @@ git stash pop: "git stash pop\n"
 git stash: "git stash\n"
 git status: "git status\n"
 git tag: "git tag "
+git grep: "git grep "
 
 # Convenience
 git edit config: "git config --local -e\n"
