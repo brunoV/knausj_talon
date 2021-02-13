@@ -1,13 +1,19 @@
 control mouse: user.mouse_toggle_control_mouse()
 zoom mouse: user.mouse_toggle_zoom_mouse()
 camera overlay: user.mouse_toggle_camera_overlay()
-run calibration: user.mouse_calibrate()	
-touch: 
+run calibration: user.mouse_calibrate()
+hold:
+	user.mouse_click_down()
+
+release:
+	user.mouse_click_up()
+
+touch|click:
 	mouse_click(0)
 	# close the mouse grid if open
 	user.grid_close()
 
-righty: 
+righty:
 	mouse_click(1)
 	# close the mouse grid if open
 	user.grid_close()
@@ -24,7 +30,7 @@ midclick:
 #option = alt
 #shift
 #super = windows key
-<user.modifiers> touch: 
+<user.modifiers> touch|click:
 	key("{modifiers}:down")
 	mouse_click(0)
 	key("{modifiers}:up")

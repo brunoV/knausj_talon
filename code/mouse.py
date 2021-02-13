@@ -137,6 +137,16 @@ class Actions:
         if eye_zoom_mouse.zoom_mouse.enabled:
             eye_zoom_mouse.zoom_mouse.on_pop(eye_zoom_mouse.zoom_mouse.state)
 
+    def mouse_click_down():
+        """Left click and hold"""
+        #print("click down")
+        ctrl.mouse_click(button=0, down=True)
+
+    def mouse_click_up():
+        """Release left click"""
+        #print("click up")
+        ctrl.mouse_click(button=0, up=True)
+
     def mouse_drag():
         """(TEMPORARY) Press and hold/release button 0 depending on state for dragging"""
         if 1 not in ctrl.mouse_buttons_down():
